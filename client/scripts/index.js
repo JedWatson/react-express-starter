@@ -4,18 +4,16 @@ var React = require('react'),
 var App = React.createClass({
 	render: function() {
 		return (
-			<div>
-				<h1>React Express Project</h1>
-				<h2><a href="http://github.com/JedWatson/react-express-starter">View project on GitHub</a></h2>
+			<div className="container">
+				<div className="page-header">
+					<h1>React Express Project</h1>
+				</div>
 				<div className="nav">
 					<Router.Link to="one">Page One</Router.Link>
 					&nbsp; | &nbsp;
 					<Router.Link to="two">Page Two</Router.Link>
 				</div>
 				<this.props.activeRouteHandler/>
-				<div className="footer">
-					Copyright &copy; Jed Watson 2014. MIT Licensed.
-				</div>
 			</div>
 		);
 	}
