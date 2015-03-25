@@ -14,11 +14,11 @@ var Header = React.createClass({
 var PageNav = React.createClass({
 	render: function() {
 		return (
-			<div className="nav">
+			<nav className="page-nav">
 				<Router.Link to="home">Home</Router.Link>
-				&nbsp; | &nbsp;
 				<Router.Link to="about">About</Router.Link>
-			</div>
+				<Router.Link to="contact">Contact</Router.Link>
+			</nav>
 		);
 	}
 });
@@ -26,7 +26,7 @@ var PageNav = React.createClass({
 var App = React.createClass({
 	render: function() {
 		return (
-			<div className="container">
+			<div className="page-container">
 				<Header />
 				<PageNav />
 				<Router.RouteHandler/>
@@ -42,9 +42,10 @@ var routes = {
 
 var routes = (
 	<Router.Route name="app" path="/" handler={App}>
-		<Router.Route name="home" path="/" handler={routes.Home}/>
-		<Router.Route name="about" path="/about" handler={routes.About}/>
-		<Router.DefaultRoute handler={routes.Home}/>
+		<Router.Route name="home" path="/" handler={routes.Home} />
+		<Router.Route name="about" path="/about" handler={routes.About} />
+		<Router.Route name="contact" path="/contact" handler={routes.Contact} />
+		<Router.DefaultRoute handler={routes.Home} />
 	</Router.Route>
 );
 
