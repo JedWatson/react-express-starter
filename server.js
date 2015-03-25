@@ -1,6 +1,5 @@
 var express = require('express'),
 	browserify = require('browserify-middleware'),
-	reactify = require('reactify'),
 	less = require('less-middleware'),
 	nunjucks = require('nunjucks'),
 	config = require('./client/config');
