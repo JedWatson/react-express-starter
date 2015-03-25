@@ -11,14 +11,14 @@
     "url": "https://github.com/JedWatson/react-project-starter.git"
   },
   "dependencies": {
+    "babelify": "^5.0.4",
     "bootstrap": "^3.3.4",
     "browserify-middleware": "^5.0.2",
     "express": "^4.12.3",
     "less-middleware": "^2.0.1",
     "nunjucks": "^1.2.0",
     "react": "^0.13.1",
-    "react-router": "^0.13.2",
-    "reactify": "^1.1.0"
+    "react-router": "^0.13.2"
   },
   "scripts": {
     "test": "echo \"no tests yet\" && exit 0"
