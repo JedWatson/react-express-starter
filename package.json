@@ -21,9 +21,15 @@
     "react-router": "^0.13.2"
   },
   "scripts": {
-    "test": "echo \"no tests yet\" && exit 0"
+    "test": "echo \"no tests yet\" && exit 0",
+    "lint": "eslint ./; true"
   },
   "keywords": [
     "demo"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^2.0.2",
+    "eslint": "^0.17.1",
+    "eslint-plugin-react": "^1.6.1"
+  }
 }
