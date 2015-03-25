@@ -1,6 +1,6 @@
-React = require('react');
+var React = require('react');
 
-var About = React.createClass({
+var Contact = React.createClass({
 	render: function() {
 		return (
 			<div className="page-body">
@@ -12,4 +12,4 @@ var About = React.createClass({
 	}
 });
 
-module.exports = About;
+module.exports = Contact;

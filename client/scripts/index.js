@@ -37,7 +37,8 @@ var App = React.createClass({
 
 var routes = {
 	Home: require('../routes/Home'),
-	About: require('../routes/About')
+	About: require('../routes/About'),
+	Contact: require('../routes/Contact')
 };
 
 var routes = (
