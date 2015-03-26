@@ -1,0 +1,79 @@
+// 
+// Forms
+// ==============================
+
+
+
+
+// Group
+// ------------------------------
+
+.form-group {
+	margin-bottom: 1em;
+}
+
+
+
+
+// Inputs
+// ------------------------------
+
+.form-input {
+	.transition( ~"border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s" );
+	background-color: @input-bg-color;
+	background-image: none;
+	border-radius: .33em;
+	border: 1px solid @input-border-color;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	color: @text-color;
+	display: block;
+	font-size: @font-size-base;
+	line-height: 2.4;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	-webkit-appearance: none;
+
+
+	// states
+
+	&:hover {
+		border-color: @input-border-color-hover;
+		outline: 0;
+	}
+	&:focus {
+		border-color: @input-border-color-focus;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px fade(@input-border-color-focus, 33%);
+		outline: 0;
+	}
+	&.disabled,
+	&[disabled] {
+		background-color: @input-bg-disabled;
+	}
+}
+
+
+
+
+
+// Labels
+// ------------------------------
+
+.form-label {
+	color: @gray-light;
+	display: inline-block;
+	font-size: @font-size-sm;
+	font-weight: @font-weight-bold;
+	margin-bottom: .5em;
+}
+
+
+
+
+
+// Types
+// ------------------------------
+
+.checkbox {
+	margin-bottom: 1em;
+}

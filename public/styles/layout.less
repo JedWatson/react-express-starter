@@ -1,0 +1,76 @@
+// 
+// Layout
+// ==============================
+
+
+
+
+// Container
+// ------------------------------
+
+.page-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	padding-left: @app-gutter;
+	padding-right: @app-gutter;
+}
+
+
+
+
+// Page Header
+// ------------------------------
+
+.page-header {
+	box-shadow: 0 1px 0 #eee;
+	padding: 2em 0;
+
+	h1 {
+		color: #ccc;
+		font-weight: 100;
+		letter-spacing: 0.05em;
+		margin: 0;
+		text-align: center;
+	}
+}
+
+
+
+
+// Navigation
+// ------------------------------
+
+.page-nav {
+	box-shadow: 0 1px 0 @gray-lighter;
+	line-height: 1;
+	// text-align: center;
+	
+	// Style the active links
+	a {
+		color: @gray-light;
+		display: inline-block;
+		padding: 1em;
+
+		&:hover,
+		&:focus {
+			color: @gray;
+			text-decoration: none;
+		}
+
+		&.active {
+			box-shadow: 0 1px 0 @app-primary;
+			color: @app-primary;
+		}
+	}
+}
+
+
+
+
+// Page Body
+// ------------------------------
+
+.page-body {
+	padding: 2em 0;
+}

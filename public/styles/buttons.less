@@ -1,0 +1,163 @@
+//
+// Buttons
+// ==============================
+
+
+// Base styles
+// ------------------------------
+
+.btn {
+	.user-select(none);
+	background: none;
+	border: 1px solid transparent;
+	border-radius: .33em;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: @btn-font-weight;
+	line-height: 2.4;
+	margin-bottom: 0;
+	padding: 0 1em;
+	text-align: center;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
+	-webkit-appearance: none;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		color: @btn-default-color;
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+		outline: 0;
+	}
+
+	&.disabled,
+	&[disabled] {
+		opacity: .4;
+		pointer-events: none;
+	}
+}
+
+
+
+
+// Default is bordered
+// ------------------------------
+
+.btn-default {
+	border-color: @btn-default-border;
+	color: @app-primary;
+
+	&:hover,
+	&:focus {
+		background-color: fade(@app-primary, 8%);
+		border-color: fade(@app-primary, 40%);
+		outline: none;
+	}
+	&:active {
+		background-color: fade(@app-primary, 16%);
+		outline: none;
+	}
+}
+
+
+	
+
+
+// Alternate styles
+// ------------------------------
+
+.btn-primary {
+	.button-variant(@btn-primary-color; @btn-primary-bg);
+}
+.btn-success {
+	.button-variant(@btn-success-color; @btn-success-bg);
+}
+.btn-warning {
+	.button-variant(@btn-warning-color; @btn-warning-bg);
+}
+.btn-danger {
+	.button-variant(@btn-danger-color; @btn-danger-bg);
+}
+
+
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+	color: @link-color;
+	font-weight: normal;
+	border-radius: 0;
+
+	&,
+	&:active,
+	&.active,
+	&[disabled],
+	fieldset[disabled] & {
+		background-color: transparent;
+		.box-shadow(none);
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: transparent;
+	}
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: @link-hover-decoration;
+		background-color: transparent;
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus {
+			color: @btn-link-disabled-color;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+// Button Sizes
+// ------------------------------
+
+.btn-lg { font-size: @font-size-lg; }
+.btn-sm { font-size: @font-size-sm; }
+.btn-xs { font-size: @font-size-xs; }
+
+
+
+
+// Block button
+// ------------------------------
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn-block {
+		width: 100%;
+	}
+}

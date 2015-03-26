@@ -5,109 +5,24 @@
 
 
 
-// Bootstrap
+// Reset & Helpers
 // ------------------------------
 
-// Core variables and mixins
-@import "../../node_modules/bootstrap/less/variables";
-@import "../../node_modules/bootstrap/less/mixins";
-
-// Reset and dependencies
-@import "../../node_modules/bootstrap/less/normalize";
-
-// Core CSS
-@import "../../node_modules/bootstrap/less/scaffolding";
+@import "./mixins";
+@import "./normalize";
+@import "./scaffolding";
+@import "./variables";
 
 
 
 
-// Variables
+// Components
 // ------------------------------
 
-@app-primary: #08c;
-@app-gutter:  20px;
-
-
-
-
-// Type
-// ------------------------------
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-	font-weight: 300;
-	margin-bottom: .6em;
-	margin-top: 0;
-}
-
-
-
-
-// Container
-// ------------------------------
-
-.page-container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 800px;
-	padding-left: @app-gutter;
-	padding-right: @app-gutter;
-}
-
-
-
-
-// Page Header
-// ------------------------------
-
-.page-header {
-	box-shadow: 0 1px 0 #eee;
-	padding: 2em 0;
-
-	h1 {
-		margin: 0;
-	}
-}
-
-
-
-
-// Navigation
-// ------------------------------
-
-.page-nav {
-	box-shadow: 0 1px 0 @gray-lighter;
-	line-height: 1;
-	// text-align: center;
-	
-	// Style the active links
-	a {
-		color: @gray-light;
-		display: inline-block;
-		padding: 1em;
-
-		&:hover,
-		&:focus {
-			color: @gray;
-			text-decoration: none;
-		}
-
-		&.active {
-			box-shadow: 0 1px 0 @app-primary;
-			color: @app-primary;
-		}
-	}
-}
-
-
-
-
-// Page Body
-// ------------------------------
-
-.page-body {
-	padding: 2em 0;
-}
+@import "./buttons";
+@import "./forms";
+@import "./layout";
+@import "./type";
 
 
 
