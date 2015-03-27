@@ -14,7 +14,7 @@ var Header = React.createClass({
 var PageNav = React.createClass({
 	render: function() {
 		return (
-			<nav className="page-nav">
+			<nav className="primary-nav">
 				<Router.Link to="home">Home</Router.Link>
 				<Router.Link to="about">About</Router.Link>
 				<Router.Link to="forms">Forms</Router.Link>
