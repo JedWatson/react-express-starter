@@ -60,11 +60,56 @@
 // ------------------------------
 
 .form-label {
-	color: @gray-light;
+	.transition( color @form-animation-duration );
+	color: @form-label-color;
 	display: inline-block;
 	font-size: @font-size-sm;
 	font-weight: @font-weight-bold;
 	margin-bottom: .5em;
+}
+
+
+
+
+
+// Validation
+// ------------------------------
+
+
+// message
+
+.form-validation {
+	.animation( formValidationMessage @form-animation-duration ease );
+	color: @app-danger;
+	font-size: @font-size-xs;
+	margin-top: .5em;
+	overflow: hidden;
+}
+
+@-webkit-keyframes formValidationMessage {
+	from { max-height: 0; opacity: 0; }
+	to   { max-height: @font-size-base; opacity: 1; }
+}
+@keyframes formValidationMessage {
+	from { max-height: 0; opacity: 0; }
+	to   { max-height: @font-size-base; opacity: 1; }
+}
+
+
+// effects on other elements
+
+.form-group.is-invalid {
+	> .form-label {
+		color: @app-danger;
+	}
+	> .form-input {
+		border-color: @app-danger;
+
+		&:focus {
+			border-color: @app-danger;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px fade(@app-danger, 33%);
+		}
+	}
 }
 
 
