@@ -86,6 +86,7 @@
 			display: table-cell;
 			line-height: @component-height;
 			margin-bottom: 0;
+			vertical-align: middle;
 			width: 120px;
 		}
 	}
@@ -120,10 +121,10 @@
 // effects on other elements
 
 .form-group.is-invalid {
-	> .form-label {
+	.form-label {
 		color: @app-danger;
 	}
-	> .form-input {
+	.form-input {
 		border-color: @app-danger;
 
 		&:focus {

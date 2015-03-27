@@ -39,7 +39,7 @@ var Forms = React.createClass({
 				<div className="page-col page-col-main">
 					<h1>Forms</h1>
 					<h2>Basic Example</h2>
-					<form className="u-margin-B-xl">
+					<form className="u-margin-bottom-xl">
 						<EmailInputGroup value={this.state.inputEmail} onChange={updateEmail} required />
 						<PasswordInputGroup value={this.state.inputPassword} onChange={updatePassword} required />
 						<div className="checkbox">
