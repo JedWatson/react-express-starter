@@ -12,10 +12,6 @@ var Forms = React.createClass({
 		};
 	},
 
-	setSomeShit() {
-		this.setState({ inputEmail: Date.now() + '' })
-	},
-
 	render: function() {
 		var self = this;
 
@@ -43,7 +39,7 @@ var Forms = React.createClass({
 				<div className="page-col page-col-main">
 					<h1>Forms</h1>
 					<h2>Basic Example</h2>
-					<form role="form">
+					<form className="u-margin-B-xl">
 						<EmailInputGroup value={this.state.inputEmail} onChange={updateEmail} required />
 						<PasswordInputGroup value={this.state.inputPassword} onChange={updatePassword} required />
 						<div className="checkbox">
@@ -51,7 +47,22 @@ var Forms = React.createClass({
 								<input type="checkbox" className="checkbox-input" /> Check me out
 							</label>
 						</div>
-						<button type="button" className="btn btn-default" onClick={this.setSomeShit}>Submit</button>
+						<button type="button" className="btn btn-default">Submit</button>
+					</form>
+					<h2>Horizontal Form</h2>
+					<form className="horizontal-form">
+						<div className="form-group">
+							<label className="form-label" htmlFor="horizontalFormInputEmail">Email address</label>
+							<input type="email" className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
+						</div>
+						<div className="form-group">
+							<label className="form-label" htmlFor="horizontalFormInputPassword">Password</label>
+							<input type="password" className="form-input" placeholder="Password" id="horizontalFormInputPassword" />
+						</div>
+						<div className="form-group">
+							<div className="form-label" />
+							<button type="button" className="btn btn-default">Submit</button>
+						</div>
 					</form>
 				</div>
 			</div>

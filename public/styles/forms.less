@@ -72,6 +72,27 @@
 
 
 
+// Horizontal Form
+// ------------------------------
+
+@media (min-width: @container-width) {
+	.horizontal-form {
+		.form-group {
+			display: table;
+			table-layout: fixed;
+			min-width: 100%;
+		}
+		.form-label {
+			display: table-cell;
+			line-height: @component-height;
+			margin-bottom: 0;
+			width: 120px;
+		}
+	}
+}
+
+
+
 // Validation
 // ------------------------------
 
