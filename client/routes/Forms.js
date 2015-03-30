@@ -49,8 +49,10 @@ var Forms = React.createClass({
 						</div>
 						<button type="button" className="btn btn-default">Submit</button>
 					</form>
+
+					
 					<h2>Horizontal Form</h2>
-					<form className="horizontal-form">
+					<form className="horizontal-form u-margin-bottom-xl">
 						<div className="form-group">
 							<label className="form-label" htmlFor="horizontalFormInputEmail">Email address</label>
 							<input type="email" className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
@@ -61,6 +63,27 @@ var Forms = React.createClass({
 						</div>
 						<div className="form-group">
 							<div className="form-label" />
+							<button type="button" className="btn btn-default">Submit</button>
+						</div>
+					</form>
+
+
+					<h2>Inline Form</h2>
+					<form className="inline-form">
+						<div className="form-group">
+							<label className="form-label" htmlFor="horizontalFormInputEmail">Email address</label>
+							<input type="email" className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
+						</div>
+						<div className="form-group">
+							<label className="form-label" htmlFor="horizontalFormInputPassword">Password</label>
+							<input type="password" className="form-input" placeholder="Password" id="horizontalFormInputPassword" />
+						</div>
+						<div className="checkbox">
+							<label className="checkbox-label">
+								<input type="checkbox" className="checkbox-input" /> Check it
+							</label>
+						</div>
+						<div className="form-group">
 							<button type="button" className="btn btn-default">Submit</button>
 						</div>
 					</form>
