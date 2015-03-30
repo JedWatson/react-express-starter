@@ -1,6 +1,8 @@
 // 
 // Button variants
-// ------------------------------
+// ==============================
+
+// Inspired by from https://github.com/twbs/bootstrap
 
 .button-variant(@color; @background) {
 	#gradient .vertical(lighten(@background, 4%), darken(@background, 4%));
@@ -34,8 +36,8 @@
 	&:hover,
 	&:focus {
 		background-color: mix(@border, @body-bg, 8%);
-		border-color: darken(@border, 10%);
 		background-image: none;
+		border-color: darken(@border, 10%);
 		color: @color;
 		outline: none;
 	}
