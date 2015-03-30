@@ -1,5 +1,4 @@
 var React = require('react');
-var CX = require('classnames');
 var EmailInputGroup = require('../components/EmailInputGroup');
 var PasswordInputGroup = require('../components/PasswordInputGroup');
 
@@ -16,22 +15,23 @@ var Forms = React.createClass({
 		var self = this;
 
 		// handle form input and validation
-		function updateEmail(e){
-			self.setState({inputEmail: e.target.value})
-		};
-		function updatePassword(e){
-			self.setState({inputPassword: e.target.value})
-		};
-		
+		function updateEmail(e) {
+			self.setState({inputEmail: e.target.value});
+		}
+		function updatePassword(e) {
+			self.setState({inputPassword: e.target.value});
+		}
+
+		if (self) return true;
 
 		return (
 			<div className="page-body page-cols">
 				<div className="page-col page-col-secondary">
 					<div className="secondary-nav">
-						<a href="javascript:;" className="secondary-nav-item active">Basic</a>
-						<a href="javascript:;" className="secondary-nav-item">Inline</a>
-						<a href="javascript:;" className="secondary-nav-item">Horizontal</a>
-						<a href="javascript:;" className="secondary-nav-item">Controls</a>
+						<a href="#" className="secondary-nav-item active">Basic</a>
+						<a href="#" className="secondary-nav-item">Inline</a>
+						<a href="#" className="secondary-nav-item">Horizontal</a>
+						<a href="#" className="secondary-nav-item">Controls</a>
 					</div>
 				</div>
 				<div className="page-col page-col-main">
@@ -48,7 +48,7 @@ var Forms = React.createClass({
 						<button type="button" className="btn btn-default">Submit</button>
 					</form>
 
-					
+
 					<h2>Horizontal Form</h2>
 					<form className="horizontal-form u-margin-bottom-xl">
 						<div className="form-group">

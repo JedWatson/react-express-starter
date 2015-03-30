@@ -1,5 +1,5 @@
 var React = require('react');
-var CX = require('classnames');
+var classNames = require('classnames');
 
 var REGEXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -8,7 +8,7 @@ function validateEmail(value) {
 }
 
 module.exports = React.createClass({
-	displayName: "EmailInputGroup",
+	displayName: 'EmailInputGroup',
 	propTypes: {
 		alwaysValidate: React.PropTypes.bool,
 		required: React.PropTypes.bool,
@@ -77,7 +77,7 @@ module.exports = React.createClass({
 				</div>
 			);
 		}
-		var formGroupClass = CX('form-group', {
+		var formGroupClass = classNames('form-group', {
 			'is-invalid': !this.state.isValid
 		});
 
@@ -87,6 +87,6 @@ module.exports = React.createClass({
 				<input onChange={this.handleChange} onBlur={this.handleBlur} value={this.props.value} type="email" className="form-input" placeholder="Enter email" id="inputEmail" />
 				{validationMessage}
 			</div>
-		)
+		);
 	}
 });
