@@ -22,9 +22,7 @@ var Forms = React.createClass({
 		function updatePassword(e){
 			self.setState({inputPassword: e.target.value})
 		};
-
-
-		// render that shit
+		
 
 		return (
 			<div className="page-body page-cols">

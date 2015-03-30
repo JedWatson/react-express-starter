@@ -3,36 +3,49 @@
 // ------------------------------
 
 .button-variant(@color; @background) {
+	#gradient .vertical(lighten(@background, 4%), darken(@background, 4%));
 	background-color: @background;
 	color: @color;
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: lighten(@background, 10%);
+		#gradient .vertical(lighten(@background, 8%), @background);
 		color: @color;
+		outline: none;
+	}
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 1px @body-bg, 0 0 0 3px fade(@background, 25%);
 	}
 	&:active,
-	&.active,
-	.open > .dropdown-toggle& {
-		background-color: lighten(@background, 10%);
-		color: @color;
-	}
-	&:active,
-	&.active,
-	.open > .dropdown-toggle& {
+	&.active {
+		background-color: darken(@background, 5%);
 		background-image: none;
+		box-shadow: none;
 	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			background-color: @background;
-		}
+}
+
+.button-default-variant(@color; @border) {
+	background: none;
+	border-color: @border;
+	color: @color;
+
+	&:hover,
+	&:focus {
+		background-color: mix(@border, @body-bg, 8%);
+		border-color: darken(@border, 10%);
+		background-image: none;
+		color: @color;
+		outline: none;
+	}
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 1px @body-bg, 0 0 0 3px fade(@border, 15%);
+	}
+	&:active {
+		background-color: fade(@border, 20%);
+		border-color: darken(@border, 20%);
+		box-shadow: none;
 	}
 }

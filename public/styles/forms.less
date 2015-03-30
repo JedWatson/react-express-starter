@@ -22,7 +22,7 @@
 	.transition( ~"border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s" );
 	background-color: @input-bg-color;
 	background-image: none;
-	border-radius: .33em;
+	border-radius: @border-radius-base;
 	border: 1px solid @input-border-color;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	color: @text-color;
@@ -49,6 +49,18 @@
 	&[disabled] {
 		background-color: @input-bg-disabled;
 	}
+}
+
+
+// input sizes
+
+.form-input-lg { font-size: @font-size-lg; }
+.form-input-sm { font-size: @font-size-sm; }
+.form-input-xs {
+	font-size: @font-size-xs;
+	line-height: 1.9;
+	padding-left: .66em;
+	padding-right: .66em;
 }
 
 

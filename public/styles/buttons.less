@@ -10,13 +10,13 @@
 	.user-select(none);
 	background: none;
 	border: 1px solid transparent;
-	border-radius: .33em;
+	border-radius: @border-radius-base;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: @btn-font-weight;
 	line-height: @component-height;
 	margin-bottom: 0;
-	padding: 0 @component-padding;
+	padding: 0 @btn-padding-horizontal;
 	text-align: center;
 	touch-action: manipulation;
 	vertical-align: middle;
@@ -46,43 +46,39 @@
 
 
 
-// Default is bordered
+// Button Variants
 // ------------------------------
+
+
+// default styles
 
 .btn-default {
-	border-color: @btn-default-border;
-	color: @app-primary;
-
-	&:hover,
-	&:focus {
-		background-color: fade(@app-primary, 8%);
-		border-color: fade(@app-primary, 40%);
-		outline: none;
-	}
-	&:active {
-		background-color: fade(@app-primary, 16%);
-		outline: none;
-	}
+	.button-default-variant(@btn-default-color; @btn-default-border);
+}
+.btn-default.btn-success {
+	.button-default-variant(@btn-success-color; @btn-success-border);
+}
+.btn-default.btn-warning {
+	.button-default-variant(@btn-warning-color; @btn-warning-border);
+}
+.btn-default.btn-danger {
+	.button-default-variant(@btn-danger-color; @btn-danger-border);
 }
 
 
-	
-
-
-// Alternate styles
-// ------------------------------
+// fill styles
 
 .btn-primary {
-	.button-variant(@btn-primary-color; @btn-primary-bg);
+	.button-variant(white; @btn-primary-bg);
 }
 .btn-success {
-	.button-variant(@btn-success-color; @btn-success-bg);
+	.button-variant(white; @btn-success-bg);
 }
 .btn-warning {
-	.button-variant(@btn-warning-color; @btn-warning-bg);
+	.button-variant(white; @btn-warning-bg);
 }
 .btn-danger {
-	.button-variant(@btn-danger-color; @btn-danger-bg);
+	.button-variant(white; @btn-danger-bg);
 }
 
 
@@ -93,17 +89,17 @@
 
 // Make a button look and behave like a link
 .btn-link {
+	border-radius: 0;
 	color: @link-color;
 	font-weight: normal;
-	border-radius: 0;
 
 	&,
 	&:active,
 	&.active,
 	&[disabled],
 	fieldset[disabled] & {
-		background-color: transparent;
 		.box-shadow(none);
+		background-color: transparent;
 	}
 	&,
 	&:hover,
@@ -113,17 +109,9 @@
 	}
 	&:hover,
 	&:focus {
+		background-color: transparent;
 		color: @link-hover-color;
 		text-decoration: @link-hover-decoration;
-		background-color: transparent;
-	}
-	&[disabled],
-	fieldset[disabled] & {
-		&:hover,
-		&:focus {
-			color: @btn-link-disabled-color;
-			text-decoration: none;
-		}
 	}
 }
 
@@ -135,7 +123,12 @@
 
 .btn-lg { font-size: @font-size-lg; }
 .btn-sm { font-size: @font-size-sm; }
-.btn-xs { font-size: @font-size-xs; }
+.btn-xs {
+	font-size: @font-size-xs;
+	line-height: 1.9;
+	padding-left: .66em;
+	padding-right: .66em;
+}
 
 
 
@@ -148,16 +141,39 @@
 	width: 100%;
 }
 
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-	margin-top: 5px;
-}
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-	&.btn-block {
-		width: 100%;
+
+
+// Button Goups
+// ------------------------------
+
+.btn-group {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+
+	> .btn {
+		border-radius: 0;
+		float: left;
+		margin-left: -1px;
+		position: relative;
+
+		&:first-child {
+			.border-left-radius(@border-radius-base);
+			margin-left: 0;
+		}
+		&:last-child {
+			.border-right-radius(@border-radius-base);
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
