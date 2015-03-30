@@ -7,6 +7,7 @@
 // ------------------------------
 
 .btn {
+	.transition(box-shadow ease-in-out 0.15s);
 	.user-select(none);
 	background: none;
 	border: 1px solid transparent;
@@ -16,6 +17,7 @@
 	font-weight: @btn-font-weight;
 	line-height: @component-height;
 	margin-bottom: 0;
+	overflow: hidden; // contain gradient on IE9
 	padding: 0 @btn-padding-horizontal;
 	text-align: center;
 	touch-action: manipulation;

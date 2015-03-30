@@ -72,7 +72,7 @@ module.exports = React.createClass({
 		var validationMessage;
 		if (!this.state.isValid) {
 			validationMessage = (
-				<div className="form-validation">
+				<div className="form-validation is-invalid">
 					{this.props.value.length ? this.props.invalidMessage : this.props.requiredMessage}
 				</div>
 			);

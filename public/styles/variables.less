@@ -46,7 +46,7 @@
 @font-size-base:              14px;
 @font-size-xs: @font-size-base - 4;
 @font-size-sm: @font-size-base - 2;
-@font-size-lg: @font-size-base + 2;
+@font-size-lg: @font-size-base + 4;
 
 @font-weight-bold:             500;
 
@@ -80,9 +80,10 @@
 @form-animation-duration:    280ms;
 
 @form-label-color:            #777;
+@form-help-color:             @form-label-color;
 
 @input-bg-color:              #fff;
-@input-bg-disabled:           #eee;
+@input-bg-disabled:           darken(@input-bg-color, 3%);
 
 @input-border-color:          #ccc;
 @input-border-color-hover:    darken(@input-border-color, 10%);
