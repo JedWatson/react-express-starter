@@ -9,7 +9,10 @@ var Home = React.createClass({
 				<p>Browse the pages above to see examples of the included layout and form components, then dive into the code in <code>/client</code> to get started customising it.</p>
 				<p>Public assets are served from the <code>/public</code> folder, and anything .css file you include from the <code>/public/styles</code> folder will be built from the corresponding <code>.less</code> file.</p>
 				<p>The express server configuration is in <code>/server</code>. Here you can add custom server-side middleware, routes and templates, including API endpoints.</p>
+				<hr />
 				<p><a href="https://github.com/JedWatson/react-express-starter" target="_blank">View the GitHub Project</a></p>
+				<hr />
+				<p>Copyright &copy; 2015 <a href="http://www.thinkmill.com.au">Thinkmill</a>. MIT License.</p>
 			</div>
 		);
 	}

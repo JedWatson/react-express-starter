@@ -57,3 +57,7 @@ The client app is in `/client`, the server is in `/server`, and everything in `/
 
 A common browserify package will be generated at `/js/common.js` containing all the packages specified in `/client/config.js`.
 
+## License
+
+Copyright &copy; 2015 [Thinkmill](http://www.thinkmill.com.au). Licensed under the [MIT License](https://github.com/JedWatson/react-express-starter/blob/master/LICENSE).
+
