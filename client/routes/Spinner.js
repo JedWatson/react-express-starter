@@ -28,8 +28,56 @@ var Buttons = React.createClass({
 						</div>
 					</div>
 				</div>
-				
-				<h2 className="u-padding-top-lg">Buttons</h2>
+
+				<h2 className="u-padding-top-lg">Use in Buttons</h2>
+				<button type="button" className="btn btn-default u-margin-right-xs">
+					<Spinner type="primary" />
+				</button>
+				<button type="button" className="btn btn-default u-margin-right-xs">
+					<Spinner type="primary" />
+					Saving
+				</button>
+				<button type="button" className="btn btn-primary u-margin-right-xs">
+					<Spinner type="inverted" />
+					Saving
+				</button>
+				<hr />
+				<button type="button" className="btn btn-default btn-lg u-margin-right-xs">
+					<Spinner type="primary" />
+				</button>
+				<button type="button" className="btn btn-default btn-lg u-margin-right-xs">
+					<Spinner type="primary" />
+					Saving
+				</button>
+				<button type="button" className="btn btn-primary btn-lg u-margin-right-xs">
+					<Spinner type="inverted" />
+					Saving
+				</button>
+				<hr />
+				<button type="button" className="btn btn-default btn-sm u-margin-right-xs">
+					<Spinner type="primary" />
+				</button>
+				<button type="button" className="btn btn-default btn-sm u-margin-right-xs">
+					<Spinner type="primary" />
+					Saving
+				</button>
+				<button type="button" className="btn btn-primary btn-sm u-margin-right-xs">
+					<Spinner type="inverted" />
+					Saving
+				</button>
+				<hr />
+				<button type="button" className="btn btn-default btn-xs u-margin-right-xs">
+					<Spinner type="primary" />
+				</button>
+				<button type="button" className="btn btn-default btn-xs u-margin-right-xs">
+					<Spinner type="primary" />
+					Saving
+				</button>
+				<button type="button" className="btn btn-primary btn-xs u-margin-right-xs">
+					<Spinner type="inverted" />
+					Saving
+				</button>
+				<hr />
 				<button type="button" className="btn btn-default u-margin-right-xs" disabled>
 					<Spinner type="primary" />
 				</button>
@@ -38,42 +86,6 @@ var Buttons = React.createClass({
 					Saving
 				</button>
 				<button type="button" className="btn btn-primary u-margin-right-xs" disabled>
-					<Spinner type="inverted" />
-					Saving
-				</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-lg u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-				</button>
-				<button type="button" className="btn btn-default btn-lg u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-					Saving
-				</button>
-				<button type="button" className="btn btn-primary btn-lg u-margin-right-xs" disabled>
-					<Spinner type="inverted" />
-					Saving
-				</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-sm u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-				</button>
-				<button type="button" className="btn btn-default btn-sm u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-					Saving
-				</button>
-				<button type="button" className="btn btn-primary btn-sm u-margin-right-xs" disabled>
-					<Spinner type="inverted" />
-					Saving
-				</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-xs u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-				</button>
-				<button type="button" className="btn btn-default btn-xs u-margin-right-xs" disabled>
-					<Spinner type="primary" />
-					Saving
-				</button>
-				<button type="button" className="btn btn-primary btn-xs u-margin-right-xs" disabled>
 					<Spinner type="inverted" />
 					Saving
 				</button>
