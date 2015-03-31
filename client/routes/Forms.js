@@ -15,13 +15,14 @@ var Forms = React.createClass({
 		var self = this;
 
 		// handle form input and validation
-		function updateEmail(e){
-			self.setState({inputEmail: e.target.value})
-		};
-		function updatePassword(e){
-			self.setState({inputPassword: e.target.value})
-		};
-		
+		function updateEmail(e) {
+			self.setState({inputEmail: e.target.value});
+		}
+		function updatePassword(e) {
+			self.setState({inputPassword: e.target.value});
+		}
+
+		if (self) return true;
 
 		return (
 			<div className="page-body page-cols">
@@ -30,6 +31,7 @@ var Forms = React.createClass({
 						<a href="#section-basic" className="secondary-nav-item active">Basic</a>
 						<a href="#section-horizontal" className="secondary-nav-item">Horizontal</a>
 						<a href="#section-inline" className="secondary-nav-item">Inline</a>
+						<a href="#section-groups" className="secondary-nav-item">Input Groups</a>
 						<a href="#section-controls" className="secondary-nav-item">Supported Controls</a>
 						<a href="#section-validation" className="secondary-nav-item">Validation</a>
 					</div>
@@ -54,7 +56,7 @@ var Forms = React.createClass({
 						<button type="button" className="btn btn-default">Submit</button>
 					</form>
 
-					
+
 					<h2 id="section-horizontal" className="u-padding-top-lg">Horizontal Form</h2>
 					<form className="horizontal-form u-margin-bottom-lg">
 						<div className="form-group">
@@ -93,7 +95,7 @@ var Forms = React.createClass({
 					</form>
 
 
-					<h2 id="section-controls" className="u-padding-top-lg">Input Groups</h2>
+					<h2 id="section-groups" className="u-padding-top-lg">Input Groups</h2>
 					<form className="u-margin-bottom-lg">
 						<div className="form-group">
 							<div className="input-group">

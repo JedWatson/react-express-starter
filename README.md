@@ -21,7 +21,7 @@ It uses
 * Browserify for building your client application
 * Babel for transforming JSX and ES6
 
-## This is the base for a Yeoman Generator
+### This is the base for a Yeoman Generator
 
 This is the prototype for the [react-express](https://github.com/JedWatson/generator-react-express) yeoman generator.
 
@@ -38,7 +38,13 @@ npm install
 To start the server:
 
 ```
-node server
+npm start
+```
+
+To lint the code:
+
+```
+npm run lint
 ```
 
 ## Development

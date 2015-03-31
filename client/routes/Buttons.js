@@ -1,5 +1,4 @@
 var React = require('react');
-var CX = require('classnames');
 
 var Buttons = React.createClass({
 
@@ -15,7 +14,7 @@ var Buttons = React.createClass({
 				<button type="button" className="btn btn-default" disabled>Disabled</button>
 				<hr />
 				<button type="button" className="btn btn-link">Link</button>
-				
+
 				<h2 className="u-margin-top-lg">Large</h2>
 				<button type="button" className="btn btn-lg btn-default">Default</button>
 				<hr />
@@ -24,7 +23,7 @@ var Buttons = React.createClass({
 				<button type="button" className="btn btn-lg btn-default" disabled>Disabled</button>
 				<hr />
 				<button type="button" className="btn btn-lg btn-link">Link</button>
-				
+
 				<h2 className="u-margin-top-lg">Small</h2>
 				<button type="button" className="btn btn-sm btn-default">Default</button>
 				<hr />
@@ -33,7 +32,7 @@ var Buttons = React.createClass({
 				<button type="button" className="btn btn-sm btn-default" disabled>Disabled</button>
 				<hr />
 				<button type="button" className="btn btn-sm btn-link">Link</button>
-				
+
 				<h2 className="u-margin-top-lg">Extra Small</h2>
 				<button type="button" className="btn btn-xs btn-default">Default</button>
 				<hr />
@@ -42,7 +41,7 @@ var Buttons = React.createClass({
 				<button type="button" className="btn btn-xs btn-default" disabled>Disabled</button>
 				<hr />
 				<button type="button" className="btn btn-xs btn-link">Link</button>
-				
+
 				<h2 className="u-margin-top-lg">Colours</h2>
 				<button type="button" className="btn btn-danger">Danger</button>
 				<hr />
@@ -55,7 +54,7 @@ var Buttons = React.createClass({
 				<button type="button" className="btn btn-success">Success</button>
 				<hr />
 				<button type="button" className="btn btn-default btn-success">Success</button>
-				
+
 				<h2 className="u-margin-top-lg">Button Groups</h2>
 				<div className="btn-group">
 					<button type="button" className="btn btn-default">Left</button>

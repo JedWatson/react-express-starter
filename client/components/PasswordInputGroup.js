@@ -1,12 +1,12 @@
 var React = require('react');
-var CX = require('classnames');
+var classNames = require('classnames');
 
 function validatePassword(value) {
 	return value.length >= 8;
 }
 
 module.exports = React.createClass({
-	displayName: "PasswordInputGroup",
+	displayName: 'PasswordInputGroup',
 	propTypes: {
 		alwaysValidate: React.PropTypes.bool,
 		required: React.PropTypes.bool,
@@ -75,7 +75,7 @@ module.exports = React.createClass({
 				</div>
 			);
 		}
-		var formGroupClass = CX('form-group', {
+		var formGroupClass = classNames('form-group', {
 			'is-invalid': !this.state.isValid
 		});
 
@@ -85,6 +85,6 @@ module.exports = React.createClass({
 				<input onChange={this.handleChange} onBlur={this.handleBlur} value={this.props.value} type="password" className="form-input" placeholder="Enter password" id="inputPassword" />
 				{validationMessage}
 			</div>
-		)
+		);
 	}
 });
