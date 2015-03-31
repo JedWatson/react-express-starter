@@ -1,4 +1,4 @@
-// 
+//
 // Forms
 // ==============================
 
@@ -58,6 +58,9 @@
 		border: 0;
 		outline : 0;
 	}
+}
+.form-input-code {
+	font-family: @font-family-monospace;
 }
 
 
@@ -220,6 +223,9 @@
 
 textarea.form-input {
 	.resizable(vertical);
+	height: auto;
+	line-height: 1.4em;
+	padding: .5em @input-padding-horizontal;
 }
 
 
@@ -235,7 +241,7 @@ select.form-input {
 	background-size: 7px 11px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 	height: @component-height;
-	
+
 	&:focus {
 		box-shadow: 0 0 0 1px @body-bg, 0 0 0 3px fade(@input-border-color-focus, 15%);
 	}

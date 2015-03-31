@@ -40,11 +40,11 @@ var Forms = React.createClass({
 					<form className="u-margin-bottom-lg">
 						<div className="form-group">
 							<label className="form-label" htmlFor="basicFormInputEmail">Email address</label>
-							<input type="email" className="form-input" placeholder="Enter email" id="basicFormInputEmail" />
+							<input className="form-input" placeholder="Enter email" id="basicFormInputEmail" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="basicFormInputPassword">Password</label>
-							<input type="email" className="form-input" placeholder="Password" id="basicFormInputPassword" />
+							<input className="form-input" placeholder="Password" id="basicFormInputPassword" />
 						</div>
 						<div className="form-group">
 							<label className="checkbox-label">
@@ -59,7 +59,7 @@ var Forms = React.createClass({
 					<form className="horizontal-form u-margin-bottom-lg">
 						<div className="form-group">
 							<label className="form-label" htmlFor="horizontalFormInputEmail">Email address</label>
-							<input type="email" className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
+							<input className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="horizontalFormInputPassword">Password</label>
@@ -76,7 +76,7 @@ var Forms = React.createClass({
 					<form className="inline-form u-margin-bottom-lg">
 						<div className="form-group">
 							<label className="form-label" htmlFor="horizontalFormInputEmail">Email address</label>
-							<input type="email" className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
+							<input className="form-input" placeholder="Enter email" id="horizontalFormInputEmail" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="horizontalFormInputPassword">Password</label>
@@ -122,23 +122,31 @@ var Forms = React.createClass({
 					<form className="u-margin-bottom-lg">
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsInput">Input</label>
-							<input type="email" className="form-input" placeholder="Input" id="supportedControlsInput" />
+							<input className="form-input" placeholder="Input" id="supportedControlsInput" />
+						</div>
+						<div className="form-group">
+							<label className="form-label" htmlFor="supportedControlsInput">Code Input</label>
+							<input className="form-input form-input-code" placeholder="Input" id="supportedControlsInput" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsInputLarge">Large Input</label>
-							<input type="email" className="form-input form-input-lg" placeholder="Large" id="supportedControlsInputLarge" />
+							<input className="form-input form-input-lg" placeholder="Large" id="supportedControlsInputLarge" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsInputSmall">Small Input</label>
-							<input type="email" className="form-input form-input-sm" placeholder="Small" id="supportedControlsInputSmall" />
+							<input className="form-input form-input-sm" placeholder="Small" id="supportedControlsInputSmall" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsInputDisabled">Disabled Input</label>
-							<input type="email" className="form-input" placeholder="Disabled" id="supportedControlsInputDisabled" disabled />
+							<input className="form-input" placeholder="Disabled" id="supportedControlsInputDisabled" disabled />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsTextarea">Textarea</label>
-							<textarea type="email" className="form-input" placeholder="Textarea" id="supportedControlsTextarea" />
+							<textarea className="form-input" placeholder="Textarea" id="supportedControlsTextarea" />
+						</div>
+						<div className="form-group">
+							<label className="form-label" htmlFor="supportedControlsTextarea">Code Textarea</label>
+							<textarea className="form-input form-input-code" placeholder="Textarea" id="supportedControlsTextarea" />
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsSelect">Select</label>
