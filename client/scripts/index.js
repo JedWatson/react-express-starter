@@ -18,6 +18,7 @@ var PageNav = React.createClass({
 				<Router.Link to="home">Home</Router.Link>
 				<Router.Link to="buttons">Buttons</Router.Link>
 				<Router.Link to="forms">Forms</Router.Link>
+				<Router.Link to="spinner">Spinner</Router.Link>
 			</nav>
 		);
 	}
@@ -38,7 +39,8 @@ var App = React.createClass({
 var routes = {
 	Home: require('../routes/Home'),
 	Buttons: require('../routes/Buttons'),
-	Forms: require('../routes/Forms')
+	Forms: require('../routes/Forms'),
+	Spinner: require('../routes/Spinner')
 };
 
 var routes = (
@@ -46,6 +48,7 @@ var routes = (
 		<Router.Route name="home" path="/" handler={routes.Home} />
 		<Router.Route name="buttons" path="/buttons" handler={routes.Buttons} />
 		<Router.Route name="forms" path="/forms" handler={routes.Forms} />
+		<Router.Route name="spinner" path="/spinner" handler={routes.Spinner} />
 		<Router.DefaultRoute handler={routes.Home} />
 	</Router.Route>
 );
