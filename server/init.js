@@ -2,7 +2,7 @@ var express = require('express'),
 	browserify = require('browserify-middleware'),
 	less = require('less-middleware'),
 	nunjucks = require('nunjucks'),
-	config = require('./client/config');
+	config = require('../client/config');
 
 // initialise express
 var app = express();
