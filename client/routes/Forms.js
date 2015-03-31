@@ -22,8 +22,6 @@ var Forms = React.createClass({
 			self.setState({inputPassword: e.target.value});
 		}
 
-		if (self) return true;
-
 		return (
 			<div className="page-body page-cols">
 				<div className="page-col page-col-secondary">
