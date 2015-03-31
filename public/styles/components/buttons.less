@@ -3,6 +3,8 @@
 // ==============================
 
 
+
+
 // Base styles
 // ------------------------------
 
@@ -15,7 +17,8 @@
 	cursor: pointer;
 	display: inline-block;
 	font-weight: @btn-font-weight;
-	line-height: @component-height;
+	line-height: @component-line-height;
+	height: @component-height;
 	margin-bottom: 0;
 	overflow: hidden; // contain gradient on IE9
 	padding: 0 @btn-padding-horizontal;
@@ -56,6 +59,11 @@
 
 .btn-default {
 	.button-default-variant(@btn-default-color; @btn-default-border);
+
+	&.disabled,
+	&[disabled] {
+		background-color: @btn-default-disabled-bg;
+	}
 }
 .btn-default.btn-success {
 	.button-default-variant(@btn-success-color; @btn-success-border);
