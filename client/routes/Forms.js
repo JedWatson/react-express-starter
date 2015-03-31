@@ -151,49 +151,69 @@ var Forms = React.createClass({
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsSelect">Select</label>
 							<select className="form-input" id="supportedControlsSelect">
-								{[1,2,3,4,5].map(function(item) { return <option value={item}>Option {item}</option> })}
+								{[1, 2, 3, 4, 5].map(function(item) {
+									return <option value={item}>Option {item}</option>;
+								})}
 							</select>
 						</div>
 						<div className="form-group">
 							<label className="form-label" htmlFor="supportedControlsSelectDisabled">Disabled Select</label>
 							<select className="form-input" id="supportedControlsSelectDisabled" disabled>
-								{[1,2,3,4,5].map(function(item) { return <option value={item}>Option {item}</option> })}
+								{[1, 2, 3, 4, 5].map(function(item) {
+									return <option value={item}>Option {item}</option>;
+								})}
 							</select>
 						</div>
 						<div className="form-group">
 							<div className="form-label">Checkboxes</div>
-							{[1,2,3].map(function(item) { return <div className="checkbox">
-								<label className="checkbox-label">
-									<input type="checkbox" className="checkbox-input" /> Check me out
-								</label>
-							</div> })}
+							{[1, 2, 3].map(function(item) {
+								return (
+									<div className="checkbox">
+										<label className="checkbox-label">
+											<input type="checkbox" value={item} className="checkbox-input" /> Check me out
+										</label>
+									</div>
+								);
+							})}
 						</div>
 						<div className="form-group">
 							<div className="form-label">Radios</div>
-							{[1,2,3].map(function(item) { return <div className="radio">
-								<label className="radio-label">
-									<input type="radio" name="supportedControlsRadios" className="radio-input" /> Pick me
-								</label>
-							</div> })}
+							{[1, 2, 3].map(function(item) {
+								return (
+									<div className="radio">
+										<label className="radio-label">
+											<input type="radio" name="supportedControlsRadios" value={item} className="radio-input" /> Pick me
+										</label>
+									</div>
+								);
+							})}
 						</div>
 						<div className="form-group">
 							<div className="form-label">Inline Checkboxes</div>
 							<div className="inline-controls">
-								{[1,2,3].map(function(item) { return <span className="checkbox">
-									<label className="checkbox-label">
-										<input type="checkbox" className="checkbox-input" /> Check me out
-									</label>
-								</span> })}
+								{[1, 2, 3].map(function(item) {
+									return (
+										<span className="checkbox">
+										<label className="checkbox-label">
+											<input type="checkbox" value={item} className="checkbox-input" /> Check me out
+										</label>
+									</span>
+									);
+								})}
 							</div>
 						</div>
 						<div className="form-group">
 							<div className="form-label">Inline Radios</div>
 							<div className="inline-controls">
-								{[1,2,3].map(function(item) { return <span className="radio">
-									<label className="radio-label">
-										<input type="radio" name="supportedControlsInlineRadios" className="radio-input" /> Pick me
-									</label>
-								</span> })}
+								{[1, 2, 3].map(function(item) {
+									return (
+										<span className="radio">
+											<label className="radio-label">
+												<input type="radio" name="supportedControlsInlineRadios" value={item} className="radio-input" /> Pick me
+											</label>
+										</span>
+									);
+								})}
 							</div>
 						</div>
 						<div className="form-group">
