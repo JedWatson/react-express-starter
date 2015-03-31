@@ -1,18 +1,14 @@
 var React = require('react');
-var CX = require('classnames');
-
-function validatePassword(value) {
-	return value.length >= 8;
-}
+var classNames = require('classnames');
 
 module.exports = React.createClass({
-	displayName: "Spinner",
+	displayName: 'Spinner',
 	propTypes: {
 		type: React.PropTypes.string,
 		className: React.PropTypes.string
 	},
 	render() {
-		var componentClass = CX(
+		var componentClass = classNames(
 			'spinner',
 			'spinner--' + this.props.type,
 			this.props.className
@@ -24,6 +20,6 @@ module.exports = React.createClass({
 				<i className="spinner__dot" />
 				<i className="spinner__dot" />
 			</div>
-		)
+		);
 	}
 });

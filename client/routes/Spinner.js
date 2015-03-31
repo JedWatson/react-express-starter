@@ -1,5 +1,4 @@
 var React = require('react');
-var CX = require('classnames');
 var Spinner = require('../components/Spinner');
 
 var Buttons = React.createClass({
