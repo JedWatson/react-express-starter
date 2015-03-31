@@ -28,7 +28,7 @@
 	color: @text-color;
 	display: block;
 	font-size: @font-size-base;
-	line-height: @component-height;
+	line-height: @component-line-height;
 	height: @component-height;
 	padding: 0 @input-padding-horizontal;
 	width: 100%;
@@ -92,6 +92,27 @@
 
 
 
+// Input Group
+// ------------------------------
+
+.input-group {
+	.display-flex();
+
+	.form-input {
+		.border-right-radius(0);
+	}
+	.btn {
+		.border-left-radius(0);
+		margin-left: -1px;
+	}
+}
+.input-group-field {
+	.flex-grow(1);
+}
+
+
+
+
 // Help
 // ------------------------------
 
@@ -101,6 +122,7 @@
 	margin-bottom: @spacing-sm;
 	margin-top: @spacing-sm;
 }
+
 
 
 

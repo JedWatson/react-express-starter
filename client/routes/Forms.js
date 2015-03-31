@@ -93,6 +93,31 @@ var Forms = React.createClass({
 					</form>
 
 
+					<h2 id="section-controls" className="u-padding-top-lg">Input Groups</h2>
+					<form className="u-margin-bottom-lg">
+						<div className="form-group">
+							<div className="input-group">
+								<div className="input-group-control input-group-field">
+									<input type="text" className="form-input" placeholder="Input group field" />
+								</div>
+								<div className="input-group-control input-group-btn">
+									<button className="btn btn-default" type="button">Button</button>
+								</div>
+							</div>
+						</div>
+						<div className="form-group">
+							<div className="input-group">
+								<div className="input-group-control input-group-field">
+									<input type="text" className="form-input" placeholder="Input group field" />
+								</div>
+								<div className="input-group-control input-group-btn">
+									<button className="btn btn-primary" type="button">Button</button>
+								</div>
+							</div>
+						</div>
+					</form>
+
+
 					<h2 id="section-controls" className="u-padding-top-lg">Supported Controls</h2>
 					<form className="u-margin-bottom-lg">
 						<div className="form-group">
