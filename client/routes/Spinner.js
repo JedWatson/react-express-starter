@@ -2,8 +2,7 @@ var React = require('react');
 var Spinner = require('../components/Spinner');
 
 var Buttons = React.createClass({
-
-	render: function() {
+	render () {
 		return (
 			<div className="page-body">
 				<h1>Spinner</h1>

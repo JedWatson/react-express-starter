@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Home = React.createClass({
-	render: function() {
+	render () {
 		return (
 			<div className="page-body">
 				<h2>Welcome</h2>

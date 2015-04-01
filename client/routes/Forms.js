@@ -3,15 +3,13 @@ var EmailInputGroup = require('../components/EmailInputGroup');
 var PasswordInputGroup = require('../components/PasswordInputGroup');
 
 var Forms = React.createClass({
-
-	getInitialState: function() {
+	getInitialState () {
 		return {
 			'inputEmail': '',
 			'inputPassword': ''
 		};
 	},
-
-	render: function() {
+	render () {
 		var self = this;
 
 		// handle form input and validation
