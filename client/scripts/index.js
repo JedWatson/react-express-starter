@@ -37,22 +37,14 @@ var App = React.createClass({
 	}
 });
 
-var routes = {
-	Home: require('../routes/Home'),
-	Buttons: require('../routes/Buttons'),
-	Forms: require('../routes/Forms'),
-	Spinner: require('../routes/Spinner'),
-	Grid: require('../routes/Grid')
-};
-
 var routes = (
 	<Router.Route name="app" path="/" handler={App}>
-		<Router.Route name="home" path="/" handler={routes.Home} />
-		<Router.Route name="buttons" path="/buttons" handler={routes.Buttons} />
-		<Router.Route name="forms" path="/forms" handler={routes.Forms} />
-		<Router.Route name="spinner" path="/spinner" handler={routes.Spinner} />
-		<Router.Route name="grid" path="/grid" handler={routes.Grid} />
-		<Router.DefaultRoute handler={routes.Home} />
+		<Router.Route name="home" path="/" handler={require('../routes/Home')} />
+		<Router.Route name="buttons" path="/buttons" handler={require('../routes/Buttons')} />
+		<Router.Route name="forms" path="/forms" handler={require('../routes/Forms')} />
+		<Router.Route name="spinner" path="/spinner" handler={require('../routes/Spinner')} />
+		<Router.Route name="grid" path="/grid" handler={require('../routes/Grid')} />
+		<Router.DefaultRoute handler={require('../routes/Home')} />
 	</Router.Route>
 );
 
