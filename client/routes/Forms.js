@@ -1,8 +1,18 @@
 var React = require('react');
+
 var EmailInputGroup = require('../components/EmailInputGroup');
 var PasswordInputGroup = require('../components/PasswordInputGroup');
+var SelectInputGroup = require('../components/SelectInputGroup');
+
+var controlOptions = [
+	{ label: 'Caramel',    value: 'caramel' },
+	{ label: 'Chocolate',  value: 'chocolate' },
+	{ label: 'Strawberry', value: 'strawberry' },
+	{ label: 'Vanilla',    value: 'vanilla' }
+];
 
 var Forms = React.createClass({
+	displayName: 'VIEW_Forms',
 
 	getInitialState: function() {
 		return {
@@ -15,6 +25,9 @@ var Forms = React.createClass({
 		var self = this;
 
 		// handle form input and validation
+		function updateSelect(option) {
+			self.setState({inputSelect: option});
+		}
 		function updateEmail(e) {
 			self.setState({inputEmail: e.target.value});
 		}
@@ -203,8 +216,9 @@ var Forms = React.createClass({
 					</form>
 					<h2 id="section-validation" className="u-padding-top-lg">Validation</h2>
 					<form className="u-margin-bottom-xl">
-						<EmailInputGroup value={this.state.inputEmail} onChange={updateEmail} required />
-						<PasswordInputGroup value={this.state.inputPassword} onChange={updatePassword} required />
+						<SelectInputGroup   label="Select"   value={this.state.inputSelect}   onChange={updateSelect} options={controlOptions} htmlFor="inputSelect" name="inputSelect" required prependEmptyOption />
+						<EmailInputGroup    label="Email"    value={this.state.inputEmail}    onChange={updateEmail}    required />
+						<PasswordInputGroup label="Password" value={this.state.inputPassword} onChange={updatePassword} required />
 					</form>
 				</div>
 			</div>
