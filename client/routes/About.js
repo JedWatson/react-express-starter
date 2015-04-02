@@ -1,7 +1,7 @@
 var React = require('react');
 
 var About = React.createClass({
-	render: function() {
+	render () {
 		return (
 			<div className="page-container">
 				<h2>About Page</h2>

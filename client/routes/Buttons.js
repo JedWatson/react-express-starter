@@ -2,7 +2,7 @@ var React = require('react');
 
 var Buttons = React.createClass({
 
-	render: function() {
+	render () {
 		return (
 			<div className="page-container">
 				<h1>Buttons</h1>

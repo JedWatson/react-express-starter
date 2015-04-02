@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Grid = React.createClass({
-	render: function() {
+	render () {
 		return (
 			<div className="page-container">
 				<h1>Grid</h1>

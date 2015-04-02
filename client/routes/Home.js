@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Home = React.createClass({
-	render: function() {
+	render () {
 		return (
 			<div className="page-container">
 				<h1>React + Express Starter Project</h1>

@@ -15,14 +15,13 @@ var controlOptions = [
 var Forms = React.createClass({
 	displayName: 'VIEW_Forms',
 
-	getInitialState: function() {
+	getInitialState () {
 		return {
 			'inputEmail': '',
 			'inputPassword': ''
 		};
 	},
-
-	render: function() {
+	render () {
 		var self = this;
 
 		// handle form input and validation
@@ -126,7 +125,7 @@ var Forms = React.createClass({
 					</div>
 				</form>
 
-
+				
 				<h2 id="section-controls" className="u-padding-top-lg">Supported Controls</h2>
 				<form className="u-margin-bottom-lg">
 					<div className="form-group">
