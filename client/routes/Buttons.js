@@ -4,9 +4,9 @@ var Buttons = React.createClass({
 
 	render: function() {
 		return (
-			<div className="page-body">
+			<div className="page-container">
 				<h1>Buttons</h1>
-				<h2>Standard</h2>
+				<h2 className="u-margin-top-lg">Standard</h2>
 				<button type="button" className="btn btn-default">Default</button>
 				<hr />
 				<button type="button" className="btn btn-primary">Primary</button>

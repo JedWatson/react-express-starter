@@ -15,11 +15,14 @@ var PageNav = React.createClass({
 	render: function() {
 		return (
 			<nav className="primary-nav">
-				<Router.Link to="home">Home</Router.Link>
-				<Router.Link to="buttons">Buttons</Router.Link>
-				<Router.Link to="forms">Forms</Router.Link>
-				<Router.Link to="spinner">Spinner</Router.Link>
-				<Router.Link to="grid">Grid</Router.Link>
+				<Router.Link to="home" className="primary-nav__brand" title="Home">
+					<img src="./images/react-logo.svg" className="primary-nav__brand-src" />
+				</Router.Link>
+				{/*<Router.Link to="home">Home</Router.Link>*/}
+				<Router.Link className="primary-nav__item" to="buttons">Buttons</Router.Link>
+				<Router.Link className="primary-nav__item" to="forms">Forms</Router.Link>
+				<Router.Link className="primary-nav__item" to="spinner">Spinner</Router.Link>
+				<Router.Link className="primary-nav__item" to="grid">Grid</Router.Link>
 			</nav>
 		);
 	}
@@ -28,10 +31,19 @@ var PageNav = React.createClass({
 var App = React.createClass({
 	render: function() {
 		return (
-			<div className="page-container">
-				<Header />
+			<div className="page-wrapper">
 				<PageNav />
-				<Router.RouteHandler/>
+				<div className="page-body">
+					<Router.RouteHandler/>
+				</div>
+				<div className="page-footer">
+					{/*<div className="page-container">
+						created with <span className="page-footer__icon">&hearts;</span> by <a href="https://twitter.com/jedwatson" target="_blank">@jedwatson</a> and <a href="https://twitter.com/jossmackison" target="_blank">@jossmackison</a>
+					</div>*/}
+					<div className="page-container">
+						Copyright &copy; 2015 <a href="http://www.thinkmill.com.au" target="_blank">Thinkmill</a> &middot; MIT License
+					</div>
+				</div>
 			</div>
 		);
 	}

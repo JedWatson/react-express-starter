@@ -3,7 +3,7 @@ var React = require('react');
 var Grid = React.createClass({
 	render: function() {
 		return (
-			<div className="page-body">
+			<div className="page-container">
 				<h1>Grid</h1>
 				<h2 className="u-padding-top-lg">Three equal columns</h2>
 				<div className="g-row">
