@@ -18,7 +18,8 @@
     "less-middleware": "^2.0.1",
     "nunjucks": "^1.2.0",
     "react": "^0.13.1",
-    "react-router": "^0.13.2"
+    "react-router": "^0.13.2",
+    "underscore": "~1.8.2"
   },
   "scripts": {
     "start": "node server",
