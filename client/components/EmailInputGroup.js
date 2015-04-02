@@ -81,9 +81,11 @@ module.exports = React.createClass({
 			'is-invalid': !this.state.isValid
 		}, this.props.className);
 
+		var componentLabel = this.props.label ? <label className="form-label" htmlFor="inputEmail">{this.props.label}</label> : null;
+
 		return (
 			<div className={formGroupClass}>
-				<label className="form-label" htmlFor="inputEmail">Email address</label>
+				{componentLabel}
 				<input onChange={this.handleChange} onBlur={this.handleBlur} value={this.props.value} type="email" className="form-input" placeholder="Enter email" id="inputEmail" />
 				{validationMessage}
 			</div>
