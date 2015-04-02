@@ -268,17 +268,33 @@ select.form-input {
 
 @media (min-width: @container-width) {
 	.horizontal-form {
+		// Make the wrapper behave like a table
 		.form-group {
 			display: table;
 			table-layout: fixed;
 			min-width: 100%;
 		}
+		
+		// Fix the label width to allow the field to stretch
 		.form-label {
 			display: table-cell;
 			line-height: @component-height;
 			margin-bottom: 0;
 			vertical-align: middle;
-			width: 120px;
+			width: @form-label-width;
+		}
+
+		// Account for missing labels
+		// the wacky syntax on width is so LESS doesn't try to run the calculation itself,
+		// where it will normalize the values assuming both are pixels. this way it's
+		// left to the browser
+		.form-input:first-child {
+			margin-left: @form-label-width;
+			width: calc(~"100%" - @form-label-width);
+
+			& + .form-validation {
+				margin-left: @form-label-width;
+			}
 		}
 	}
 }
