@@ -1,7 +1,25 @@
 var React = require('react/addons');
+var Dropdown = require('../components/Dropdown');
+
+var DROPDOWN_OPTIONS = [
+	{ type: 'item', anchor: 'javascript:;', label: 'Action' },
+	{ type: 'item', anchor: 'javascript:;', label: 'Another action' },
+	{ type: 'item', anchor: 'javascript:;', label: 'Something else here' },
+	{ type: 'divider' },
+	{ type: 'header', label: 'Dropdown header' },
+	{ type: 'item', anchor: 'javascript:;', label: 'Separated link' },
+];
 
 module.exports = React.createClass({
 	displayName: 'VIEW_Buttons',
+	getInitialState() {
+		return {
+			dropdownOpen: false
+		};
+	},
+	toggleDropdown() {
+		this.setState({ dropdownOpen: !this.state.dropdownOpen });
+	},
 
 	render () {
 		return (
@@ -62,6 +80,9 @@ module.exports = React.createClass({
 					<button type="button" className="btn btn-default">Middle</button>
 					<button type="button" className="btn btn-default">Right</button>
 				</div>
+
+				<h2 className="u-margin-top-lg">Dropdown</h2>
+				<Dropdown isOpen={this.state.dropdownOpen} onChange={this.toggleDropdown} items={DROPDOWN_OPTIONS} buttonLabel="Action" buttonClass="btn btn-default" buttonDisclosureArrow />
 			</div>
 		);
 	}
