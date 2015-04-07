@@ -1,5 +1,6 @@
 var React = require('react/addons');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+var classNames = require('classnames');
 
 module.exports = React.createClass({
 	displayName: 'Dropdown',
@@ -11,7 +12,13 @@ module.exports = React.createClass({
 		isOpen: React.PropTypes.bool
 	},
 	render() {
-		var dropdownClass = this.props.isOpen ? 'dropdown is-open' : 'dropdown';
+		// classes
+		var dropdownClass = classNames('dropdown', {
+			'is-open': this.props.isOpen
+		});
+		var buttonClass = classNames('dropdown-toggle', this.props.buttonClass);
+
+		// elements
 		var dropdownMenuItems = this.props.items.map(function(item, i) {
 			var menuItem;
 			if (item.type === 'header') {
@@ -26,12 +33,12 @@ module.exports = React.createClass({
 		var dropdownMenu = this.props.isOpen ? <ul key="dropdown-menu" className="dropdown-menu" role="menu">
 			{dropdownMenuItems}
 		</ul> : null;
-		var dropdownMenuBackground = this.props.isOpen ? <div className="dropdown-menu-background" onClick={this.props.onChange} /> : null;
+		var dropdownMenuBackground = this.props.isOpen ? <div className="dropdown-menu-backdrop" onClick={this.props.onChange} /> : null;
 		var disclosureArrow = this.props.buttonDisclosureArrow ? <span className="dropdown-toggle__arrow" /> : null;
 		
 		return (
 			<div className={dropdownClass}>
-				<button onClick={this.props.onChange} className="btn btn-default dropdown-toggle" type="button">
+				<button onClick={this.props.onChange} className={buttonClass} type="button">
 					{this.props.buttonLabel}
 					{disclosureArrow}
 				</button>

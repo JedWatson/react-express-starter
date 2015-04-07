@@ -20,7 +20,13 @@
 // Button
 // ------------------------------
 
-.dropdown-toggle {}
+
+// ensure the menu enters from behind the button
+
+.dropdown-toggle {
+	position: relative;
+	z-index: @zindex-dropdown-button;
+}
 
 
 // disclosure arrow
@@ -54,7 +60,7 @@
 	font-size: @font-size-base;
 	left: 0;
 	list-style: none;
-	margin: 2px 0 0; // override default ul
+	margin: 4px 0 0; // override default ul
 	min-width: 160px;
 	padding: 5px 0;
 	position: absolute;
@@ -124,15 +130,15 @@
 }
 
 
-// backdrop
+// background
 
-.dropdown-menu-background {
+.dropdown-menu-backdrop {
 	height: 100%;
 	left: 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: @zindex-dropdown-background;
+	z-index: @zindex-dropdown-backdrop;
 }
 
 
