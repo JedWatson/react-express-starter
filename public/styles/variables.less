@@ -9,9 +9,13 @@
 // ------------------------------
 
 
+@react-blue:              #00d8ff; // react blue
+@ios-blue:                #007aff; // ios blue
+
+@app-primary:             @ios-blue; // ios blue
+
 @app-danger:              #d64242;
 @app-info:                #56cdfc;
-@app-primary:             #00d8ff;
 @app-success:             #52cc5c;
 @app-warning:             #fa9f47;
 
@@ -22,7 +26,7 @@
 @gray-light:              #999;
 @gray-lighter:            #eee;
 
-@body-bg:                 #fff;
+@body-bg:                 white;
 @text-color:              @gray-dark;
 
 @link-color:              @app-primary;
@@ -86,7 +90,7 @@
 @form-label-width:            120px;
 @form-help-color:             @form-label-color;
 
-@input-bg-color:              #fff;
+@input-bg-color:              white;
 @input-bg-disabled:           darken(@input-bg-color, 3%);
 
 @input-border-color:          #ccc;
@@ -110,7 +114,7 @@
 @btn-default-border:             mix(@app-primary, @body-bg, 60%);
 @btn-default-disabled-bg:        darken(@body-bg, 4%);
 
-@btn-primary-color:              #fff;
+@btn-primary-color:              white;
 @btn-primary-bg:                 @app-primary;
 @btn-primary-border:             @btn-primary-bg;
 
@@ -127,6 +131,38 @@
 @btn-danger-border:              mix(@app-danger, @body-bg, 60%);
 
 @btn-link-disabled-color:        @gray-light;
+
+
+
+
+// Dropdowns
+// ------------------------------
+
+@dropdown-bg:                    white;
+@dropdown-divider-bg:            #e5e5e5;
+
+@dropdown-caret-width:           .33em;
+
+@dropdown-link-color:            @text-color;
+@dropdown-link-hover-color:      @link-color;
+@dropdown-link-hover-bg:         mix(@link-color, @dropdown-bg, 10%);
+
+@dropdown-link-active-color:     white;
+@dropdown-link-active-bg:        @app-primary;
+
+@dropdown-link-disabled-color:   @gray-light;
+@dropdown-header-color:          @gray-light;
+
+
+
+
+// Z-Index List
+// ------------------------------
+
+@zindex-dropdown:                100;
+@zindex-dropdown-background:     @zindex-dropdown - 1;
+@zindex-modal:                   110;
+@zindex-modal-background:        @zindex-modal - 1;
 
 
 
