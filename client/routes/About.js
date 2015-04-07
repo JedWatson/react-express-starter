@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react/addons');
 
-var About = React.createClass({
+module.exports = React.createClass({
+	displayName: 'VIEW_About',
 	render () {
 		return (
 			<div className="page-container">
@@ -11,5 +12,3 @@ var About = React.createClass({
 		);
 	}
 });
-
-module.exports = About;

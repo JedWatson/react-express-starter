@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react/addons');
 
-var Home = React.createClass({
+module.exports = React.createClass({
+	displayName: 'VIEW_Home',
 	render () {
 		return (
 			<div className="page-container">
@@ -15,5 +16,3 @@ var Home = React.createClass({
 		);
 	}
 });
-
-module.exports = Home;

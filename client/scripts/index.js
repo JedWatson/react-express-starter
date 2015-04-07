@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require('react/addons');
 var Router = require('react-router');
 
 var Header = React.createClass({
@@ -22,7 +22,11 @@ var PageNav = React.createClass({
 				<Router.Link className="primary-nav__item" to="buttons">Buttons</Router.Link>
 				<Router.Link className="primary-nav__item" to="forms">Forms</Router.Link>
 				<Router.Link className="primary-nav__item" to="spinner">Spinner</Router.Link>
+				<Router.Link className="primary-nav__item" to="dropdown">Dropdown</Router.Link>
 				<Router.Link className="primary-nav__item" to="grid">Grid</Router.Link>
+				<a href="https://github.com/JedWatson/react-express-starter" target="_blank" title="View on GitHub" className="primary-nav__brand right">
+					<img src="./images/github-logo.svg" className="primary-nav__brand-src" />
+				</a>
 			</nav>
 		);
 	}
@@ -55,6 +59,7 @@ var routes = (
 		<Router.Route name="buttons" path="/buttons" handler={require('../routes/Buttons')} />
 		<Router.Route name="forms" path="/forms" handler={require('../routes/Forms')} />
 		<Router.Route name="spinner" path="/spinner" handler={require('../routes/Spinner')} />
+		<Router.Route name="dropdown" path="/dropdown" handler={require('../routes/Dropdown')} />
 		<Router.Route name="grid" path="/grid" handler={require('../routes/Grid')} />
 		<Router.DefaultRoute handler={require('../routes/Home')} />
 	</Router.Route>

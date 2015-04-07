@@ -15,8 +15,8 @@ module.exports = {
 	common: {
 		bundle: 'common.js',
 		packages: [
-			'react',
-			'react-router'
+			//'react/addons',
+			//'react-router'
 		]
 	}
 };

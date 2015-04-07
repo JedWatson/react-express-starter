@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require('react/addons');
 
 var EmailInputGroup = require('../components/EmailInputGroup');
 var PasswordInputGroup = require('../components/PasswordInputGroup');

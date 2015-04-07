@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react/addons');
 
-var Buttons = React.createClass({
+module.exports = React.createClass({
+	displayName: 'VIEW_Buttons',
 
 	render () {
 		return (
@@ -65,5 +66,3 @@ var Buttons = React.createClass({
 		);
 	}
 });
-
-module.exports = Buttons;

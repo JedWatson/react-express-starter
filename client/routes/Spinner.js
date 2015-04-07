@@ -1,7 +1,8 @@
-var React = require('react');
+var React = require('react/addons');
 var Spinner = require('../components/Spinner');
 
-var Buttons = React.createClass({
+module.exports = React.createClass({
+	displayName: 'VIEW_Spinner',
 	render () {
 		return (
 			<div className="page-container">
@@ -43,5 +44,3 @@ var Buttons = React.createClass({
 		);
 	}
 });
-
-module.exports = Buttons;

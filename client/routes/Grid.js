@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react/addons');
 
-var Grid = React.createClass({
+module.exports = React.createClass({
+	displayName: 'VIEW_Grid',
 	render () {
 		return (
 			<div className="page-container">
@@ -42,5 +43,3 @@ var Grid = React.createClass({
 		);
 	}
 });
-
-module.exports = Grid;
