@@ -144,7 +144,7 @@
 @dropdown-caret-width:           .33em;
 
 @dropdown-link-color:            @text-color;
-@dropdown-link-hover-color:      @link-color;
+@dropdown-link-hover-color:      mix(@link-color, @text-color, 60%);
 @dropdown-link-hover-bg:         mix(@link-color, @dropdown-bg, 10%);
 
 @dropdown-link-active-color:     white;
@@ -156,13 +156,25 @@
 
 
 
+// Modals
+// ------------------------------
+
+@modal-bg:                    white;
+@modal-backdrop-bg:           rgba(0, 0, 0, 0.5);
+@modal-padding-vertical:      20px;
+@modal-padding-horizontal:    20px;
+
+
+
+
 // Z-Index List
 // ------------------------------
 
 @zindex-dropdown:                100;
-@zindex-dropdown-background:     @zindex-dropdown - 1;
+@zindex-dropdown-button:         @zindex-dropdown + 1;
+@zindex-dropdown-backdrop:     @zindex-dropdown - 1;
 @zindex-modal:                   110;
-@zindex-modal-background:        @zindex-modal - 1;
+@zindex-modal-backdrop:        @zindex-modal - 1;
 
 
 
