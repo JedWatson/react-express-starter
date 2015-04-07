@@ -16,9 +16,9 @@ module.exports = React.createClass({
 
 		return (
 			<div className={componentClass}>
-				<i className="spinner__dot" />
-				<i className="spinner__dot" />
-				<i className="spinner__dot" />
+				<i className="spinner__dot spinner__dot--first" />
+				<i className="spinner__dot spinner__dot--second" />
+				<i className="spinner__dot spinner__dot--third" />
 			</div>
 		);
 	}
