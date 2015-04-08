@@ -1,5 +1,6 @@
 var React = require('react/addons');
 var Dropdown = require('../components/Dropdown');
+var Button = require('../components/Button');
 
 var DROPDOWN_OPTIONS = [
 	{ type: 'item', anchor: 'javascript:;', label: 'Action' },
@@ -26,59 +27,42 @@ module.exports = React.createClass({
 			<div className="page-container">
 				<h1>Buttons</h1>
 				<h2 className="u-margin-top-lg">Standard</h2>
-				<button type="button" className="btn btn-default">Default</button>
-				<hr />
-				<button type="button" className="btn btn-primary">Primary</button>
-				<hr />
-				<button type="button" className="btn btn-default" disabled>Disabled</button>
-				<hr />
-				<button type="button" className="btn btn-link">Link</button>
+				<Button>Default</Button><hr />
+				<Button type="primary">Primary</Button><hr />
+				<Button disabled>Disabled</Button><hr />
+				<Button type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Large</h2>
-				<button type="button" className="btn btn-lg btn-default">Default</button>
-				<hr />
-				<button type="button" className="btn btn-lg btn-primary">Primary</button>
-				<hr />
-				<button type="button" className="btn btn-lg btn-default" disabled>Disabled</button>
-				<hr />
-				<button type="button" className="btn btn-lg btn-link">Link</button>
+				<Button size="lg">Default</Button><hr />
+				<Button size="lg" type="primary">Primary</Button><hr />
+				<Button size="lg" disabled>Disabled</Button><hr />
+				<Button size="lg" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Small</h2>
-				<button type="button" className="btn btn-sm btn-default">Default</button>
-				<hr />
-				<button type="button" className="btn btn-sm btn-primary">Primary</button>
-				<hr />
-				<button type="button" className="btn btn-sm btn-default" disabled>Disabled</button>
-				<hr />
-				<button type="button" className="btn btn-sm btn-link">Link</button>
+				<Button size="sm">Default</Button><hr />
+				<Button size="sm" type="primary">Primary</Button><hr />
+				<Button size="sm" disabled>Disabled</Button><hr />
+				<Button size="sm" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Extra Small</h2>
-				<button type="button" className="btn btn-xs btn-default">Default</button>
-				<hr />
-				<button type="button" className="btn btn-xs btn-primary">Primary</button>
-				<hr />
-				<button type="button" className="btn btn-xs btn-default" disabled>Disabled</button>
-				<hr />
-				<button type="button" className="btn btn-xs btn-link">Link</button>
+				<Button size="xs">Default</Button><hr />
+				<Button size="xs" type="primary">Primary</Button><hr />
+				<Button size="xs" disabled>Disabled</Button><hr />
+				<Button size="xs" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Colours</h2>
-				<button type="button" className="btn btn-danger">Danger</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-danger">Danger</button>
-				<hr />
-				<button type="button" className="btn btn-warning">Warning</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-warning">Warning</button>
-				<hr />
-				<button type="button" className="btn btn-success">Success</button>
-				<hr />
-				<button type="button" className="btn btn-default btn-success">Success</button>
+				<Button type="danger">Danger</Button><hr />
+				<Button type="default-danger">Danger</Button><hr />
+				<Button type="warning">Warning</Button><hr />
+				<Button type="default-warning">Warning</Button><hr />
+				<Button type="success">Success</Button><hr />
+				<Button type="default-success">Success</Button>
 
 				<h2 className="u-margin-top-lg">Button Groups</h2>
 				<div className="btn-group">
-					<button type="button" className="btn btn-default">Left</button>
-					<button type="button" className="btn btn-default">Middle</button>
-					<button type="button" className="btn btn-default">Right</button>
+					<Button>Left</Button>
+					<Button>Middle</Button>
+					<Button>Right</Button>
 				</div>
 
 				<h2 className="u-margin-top-lg">Dropdown</h2>
