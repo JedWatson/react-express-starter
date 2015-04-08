@@ -22,8 +22,6 @@
 
 // shell div to position the modal
 .modal-dialog {
-	.animation-duration( 280ms );
-	.animation-timing-function( cubic-bezier(0.680, -0.550, 0.265, 1.550) );
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -35,8 +33,11 @@
 }
 .modal-dialog-enter {
 	.animation-name( modalDialogEnter );
+	.animation-duration( 280ms );
+	.animation-timing-function( cubic-bezier(0.680, -0.550, 0.265, 1.550) );
 }
 .modal-dialog-leave {
+	.animation-duration( 140ms );
 	.animation-name( modalDialogLeave );
 }
 
@@ -83,7 +84,7 @@
 
 // header
 .modal-header {
-	box-shadow: inset 0 -1px 0 rgba(0,0,0,.03), 0 1px 0 rgba(0,0,0,.03);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.05), 0 1px 0 rgba(0,0,0,.05);
 }
 .modal-title {
 	color: inherit;
@@ -95,7 +96,7 @@
 
 // close button
 .modal-close {
-	.transition(opacity 200ms);
+	.transition(opacity 140ms);
 	// dechrome
 	background: none;
 	border: none;
@@ -123,7 +124,7 @@
 		outline: 0;
 	}
 	&:active {
-		opacity: .6;
+		color: @app-danger;
 	}
 }
 
@@ -131,15 +132,11 @@
 .modal-body {
 	padding-bottom: @modal-padding-horizontal;
 	padding-top: @modal-padding-horizontal;
-
-	> .form-group:last-child {
-		margin-bottom: 0;
-	}
 }
 
 // footer
 .modal-footer {
-	box-shadow: inset 0 1px 0 rgba(0,0,0,.03), 0 -1px 0 rgba(0,0,0,.03);
+	box-shadow: inset 0 1px 0 rgba(0,0,0,.05), 0 -1px 0 rgba(0,0,0,.05);
 }
 
 
