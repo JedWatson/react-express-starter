@@ -67,6 +67,11 @@
 	text-align: left; // ensures proper alignment if parent has alternative alignment
 	top: 100%;
 	z-index: @zindex-dropdown;
+
+	.align-right & {
+		left: auto;
+		right: 0;
+	}
 }
 .dropdown-menu-enter {
 	.animation-name( dropdownMenuEnter );
@@ -78,9 +83,10 @@
 
 // list item 
 
-.dropdown-menu__anchor {
+.dropdown-menu__action {
 	clear: both;
 	color: @dropdown-link-color;
+	cursor: pointer;
 	display: block;
 	font-weight: normal;
 	line-height: @line-height-base;

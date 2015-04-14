@@ -7,6 +7,8 @@ module.exports = React.createClass({
 	propTypes: {
 		items: React.PropTypes.array.isRequired,
 		onChange: React.PropTypes.func,
+		customClass: React.PropTypes.string,
+		buttonClass: React.PropTypes.string,
 		buttonLabel: React.PropTypes.string,
 		buttonDisclosureArrow: React.PropTypes.bool,
 		isOpen: React.PropTypes.bool
@@ -14,8 +16,9 @@ module.exports = React.createClass({
 	render() {
 		// classes
 		var dropdownClass = classNames('dropdown', {
-			'is-open': this.props.isOpen
-		});
+			'is-open': this.props.isOpen,
+			'align-right': this.props.alignRight
+		}, this.props.customClass);
 		var buttonClass = classNames('dropdown-toggle', this.props.buttonClass);
 
 		// elements
@@ -26,7 +29,19 @@ module.exports = React.createClass({
 			} else if (item.type === 'divider') {
 				menuItem = <li key={'item-' + i} className="dropdown-menu__divider" />
 			} else {
-				menuItem = <li key={'item-' + i} className="dropdown-menu__item"><a className="dropdown-menu__anchor" href={item.anchor}>{item.label}</a></li>
+				if (item.href) {
+					menuItem = (
+						<li key={'item-' + i} className="dropdown-menu__item">
+							<a className="dropdown-menu__action" href={item.anchor}>{item.label}</a>
+						</li>
+					);
+				} else {
+					menuItem = (
+						<li key={'item-' + i} className="dropdown-menu__item">
+							<span className="dropdown-menu__action" onClick={item.action}>{item.label}</span>
+						</li>
+					);
+				}
 			}
 			return menuItem;
 		}.bind(this));

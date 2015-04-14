@@ -20,10 +20,12 @@ var PageNav = React.createClass({
 				</Router.Link>
 				{/*<Router.Link to="home">Home</Router.Link>*/}
 				<Router.Link className="primary-nav__item" to="buttons">Buttons</Router.Link>
+				<Router.Link className="primary-nav__item" to="tables">Tables</Router.Link>
 				<Router.Link className="primary-nav__item" to="forms">Forms</Router.Link>
 				<Router.Link className="primary-nav__item" to="spinner">Spinner</Router.Link>
 				<Router.Link className="primary-nav__item" to="modal">Modal</Router.Link>
 				<Router.Link className="primary-nav__item" to="grid">Grid</Router.Link>
+				<Router.Link className="primary-nav__item" to="date-picker">Date Picker</Router.Link>
 				<a href="https://github.com/JedWatson/react-express-starter" target="_blank" title="View on GitHub" className="primary-nav__brand right">
 					<img src="./images/github-logo.svg" className="primary-nav__brand-src" />
 				</a>
@@ -57,10 +59,12 @@ var routes = (
 	<Router.Route name="app" path="/" handler={App}>
 		<Router.Route name="home" path="/" handler={require('../routes/Home')} />
 		<Router.Route name="buttons" path="/buttons" handler={require('../routes/Buttons')} />
+		<Router.Route name="tables" path="/tables" handler={require('../routes/Tables')} />
 		<Router.Route name="forms" path="/forms" handler={require('../routes/Forms')} />
 		<Router.Route name="spinner" path="/spinner" handler={require('../routes/Spinner')} />
 		<Router.Route name="modal" path="/modal" handler={require('../routes/Modal')} />
 		<Router.Route name="grid" path="/grid" handler={require('../routes/Grid')} />
+		<Router.Route name="date-picker" path="/date-picker" handler={require('../routes/DatePicker')} />
 		<Router.DefaultRoute handler={require('../routes/Home')} />
 	</Router.Route>
 );

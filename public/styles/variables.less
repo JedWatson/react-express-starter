@@ -11,8 +11,9 @@
 
 @react-blue:              #00d8ff; // react blue
 @ios-blue:                #007aff; // ios blue
+@elemental-turquoise:     #31adb8; // elemental turquoise
 
-@app-primary:             @ios-blue; // ios blue
+@app-primary:             @elemental-turquoise;
 
 @app-danger:              #d64242;
 @app-info:                #56cdfc;
@@ -26,7 +27,7 @@
 @gray-light:              #999;
 @gray-lighter:            #eee;
 
-@body-bg:                 white;
+@body-bg:                 #fefefe;
 @text-color:              @gray-dark;
 @heading-color:           @gray-darker;
 
@@ -103,13 +104,24 @@
 
 
 
+// Tables
+// ------------------------------
+
+@table-padding:               .66em;
+
+@table-border:                rgba(0,0,0,0.06);
+@table-sort-arrow-width:      4px;
+
+
+
+
 // Buttons
 // ------------------------------
 
 
 @btn-font-weight:                500;
 
-@btn-padding-horizontal:      1em;
+@btn-padding-horizontal:         1em;
 
 @btn-default-color:              @app-primary;
 @btn-default-border:             mix(@app-primary, @body-bg, 60%);
@@ -168,6 +180,29 @@
 
 
 
+// Date Picker
+// ------------------------------
+
+@datepicker-bg:                  #fafafa;
+@datepicker-header-bg:           desaturate(@app-primary, 20%);
+@datepicker-footer-bg:           darken(@datepicker-bg, 5%);
+@datepicker-footer-border:       darken(@datepicker-bg, 15%);
+
+@datepicker-selected-day-bg:       @app-primary;
+@datepicker-selected-day-color:    white;
+@datepicker-current-day-bg:      darken(@datepicker-bg, 3%);
+@datepicker-current-day-border:  darken(@datepicker-bg, 15%);
+
+@datepicker-padding:             8px;
+@datepicker-dialog-width:        280px;
+@datepicker-ranges-width:        140px;
+
+@datepicker-title-button-height: 30px;
+@datepicker-title-button-width:  20px;
+
+
+
+
 // Z-Index List
 // ------------------------------
 
@@ -185,6 +220,8 @@
 
 @app-gutter:                  20px;
 @border-radius-base:         .33em;
+@border-radius-sm:           .25em;
+@border-radius-lg:            .5em;
 
 @spinner-dot-size:             8px;
 @spinner-dot-bg:               @gray-light;
