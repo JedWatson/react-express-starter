@@ -33,22 +33,22 @@ module.exports = React.createClass({
 				<Button type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Large</h2>
-				<Button size="lg">Default</Button><hr />
-				<Button size="lg" type="primary">Primary</Button><hr />
-				<Button size="lg" disabled>Disabled</Button><hr />
-				<Button size="lg" type="link">Link</Button>
+				<Button size="large">Default</Button><hr />
+				<Button size="large" type="primary">Primary</Button><hr />
+				<Button size="large" disabled>Disabled</Button><hr />
+				<Button size="large" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Small</h2>
-				<Button size="sm">Default</Button><hr />
-				<Button size="sm" type="primary">Primary</Button><hr />
-				<Button size="sm" disabled>Disabled</Button><hr />
-				<Button size="sm" type="link">Link</Button>
+				<Button size="small">Default</Button><hr />
+				<Button size="small" type="primary">Primary</Button><hr />
+				<Button size="small" disabled>Disabled</Button><hr />
+				<Button size="small" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Extra Small</h2>
-				<Button size="xs">Default</Button><hr />
-				<Button size="xs" type="primary">Primary</Button><hr />
-				<Button size="xs" disabled>Disabled</Button><hr />
-				<Button size="xs" type="link">Link</Button>
+				<Button size="xsmall">Default</Button><hr />
+				<Button size="xsmall" type="primary">Primary</Button><hr />
+				<Button size="xsmall" disabled>Disabled</Button><hr />
+				<Button size="xsmall" type="link">Link</Button>
 
 				<h2 className="u-margin-top-lg">Colours</h2>
 				<Button type="danger">Danger</Button><hr />
